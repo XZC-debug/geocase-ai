@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="780" viewBox="0 0 1400 780">
+  <rect width="1400" height="780" fill="#f7f7f2"/>
+  <text x="70" y="80" font-family="Arial, sans-serif" font-size="38" font-weight="700" fill="#1f2933">GeoCase AI Architecture</text>
+  <text x="70" y="120" font-family="Arial, sans-serif" font-size="20" fill="#4b5563">UiPath orchestrates case flow. Python screens GIS risk and generates explainable outputs.</text>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#374151"/>
+    </marker>
+    <style>
+      .box { fill: #ffffff; stroke: #2f3a4a; stroke-width: 2; rx: 10; }
+      .uipath { fill: #fff3e0; stroke: #b45309; }
+      .agent { fill: #e8f5f1; stroke: #047857; }
+      .data { fill: #e7f0ff; stroke: #1d4ed8; }
+      .human { fill: #fce7f3; stroke: #be185d; }
+      .label { font-family: Arial, sans-serif; font-size: 18px; font-weight: 700; fill: #111827; }
+      .sub { font-family: Arial, sans-serif; font-size: 14px; fill: #4b5563; }
+      .line { stroke: #374151; stroke-width: 2.5; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect class="box" x="70" y="250" width="190" height="92"/>
+  <text class="label" x="100" y="287">Planner User</text>
+  <text class="sub" x="100" y="316">Submits site address</text>
+  <rect class="box uipath" x="330" y="235" width="230" height="122"/>
+  <text class="label" x="370" y="280">UiPath Maestro</text>
+  <text class="sub" x="370" y="310">Planning case lifecycle</text>
+  <text class="sub" x="370" y="332">Routing and tasks</text>
+  <rect class="box agent" x="635" y="165" width="230" height="92"/>
+  <text class="label" x="675" y="202">Site Intake Agent</text>
+  <text class="sub" x="675" y="231">Normalize query</text>
+  <rect class="box data" x="635" y="315" width="230" height="102"/>
+  <text class="label" x="675" y="352">GeoCase AI API</text>
+  <text class="sub" x="675" y="381">FastAPI screening service</text>
+  <rect class="box data" x="950" y="165" width="260" height="92"/>
+  <text class="label" x="985" y="202">Sample GIS Dataset</text>
+  <text class="sub" x="985" y="231">Flood, rainfall, noise, EJ</text>
+  <rect class="box agent" x="950" y="315" width="260" height="102"/>
+  <text class="label" x="985" y="352">Risk Agents</text>
+  <text class="sub" x="985" y="381">GIS screening and EJ review</text>
+  <rect class="box agent" x="635" y="505" width="230" height="102"/>
+  <text class="label" x="675" y="542">Report Agent</text>
+  <text class="sub" x="675" y="571">Markdown risk report</text>
+  <rect class="box human" x="950" y="505" width="260" height="102"/>
+  <text class="label" x="985" y="542">Human Review</text>
+  <text class="sub" x="985" y="571">Planner or EJ reviewer</text>
+  <path class="line" d="M260 296 H330"/>
+  <path class="line" d="M560 276 L635 222"/>
+  <path class="line" d="M560 318 L635 360"/>
+  <path class="line" d="M865 365 H950"/>
+  <path class="line" d="M865 210 H950"/>
+  <path class="line" d="M1080 417 V505"/>
+  <path class="line" d="M750 417 V505"/>
+  <path class="line" d="M950 556 H865"/>
+  <path class="line" d="M635 556 L445 357"/>
+</svg>

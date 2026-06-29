@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1500" viewBox="0 0 1200 1500">
+  <rect width="1200" height="1500" fill="#f8faf8"/>
+  <text x="90" y="80" font-family="Arial, sans-serif" font-size="38" font-weight="700" fill="#1f2933">GeoCase AI Workflow</text>
+  <text x="90" y="120" font-family="Arial, sans-serif" font-size="20" fill="#4b5563">A six-day MVP case path for UiPath, AI agents, GIS screening, and human review.</text>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#374151"/>
+    </marker>
+    <style>
+      .step { fill: #ffffff; stroke: #2f3a4a; stroke-width: 2; rx: 10; }
+      .decision { fill: #fff7ed; stroke: #c2410c; stroke-width: 2; }
+      .review { fill: #fce7f3; stroke: #be185d; stroke-width: 2; rx: 10; }
+      .auto { fill: #e8f5f1; stroke: #047857; stroke-width: 2; rx: 10; }
+      .text { font-family: Arial, sans-serif; font-size: 19px; font-weight: 700; fill: #111827; text-anchor: middle; }
+      .sub { font-family: Arial, sans-serif; font-size: 14px; fill: #4b5563; text-anchor: middle; }
+      .line { stroke: #374151; stroke-width: 2.5; fill: none; marker-end: url(#arrow); }
+      .branch { font-family: Arial, sans-serif; font-size: 15px; font-weight: 700; fill: #374151; }
+    </style>
+  </defs>
+  <rect class="step" x="390" y="180" width="420" height="82"/>
+  <text class="text" x="600" y="214">Input Planning Site Address</text>
+  <text class="sub" x="600" y="242">Example: 52nd St Station</text>
+  <rect class="step" x="390" y="320" width="420" height="82"/>
+  <text class="text" x="600" y="354">Create Planning Case</text>
+  <text class="sub" x="600" y="382">UiPath Maestro Case</text>
+  <rect class="step" x="390" y="460" width="420" height="82"/>
+  <text class="text" x="600" y="494">Match GIS Dataset</text>
+  <text class="sub" x="600" y="522">Sample flood, rainfall, noise, EJ data</text>
+  <polygon class="decision" points="600,610 810,700 600,790 390,700"/>
+  <text class="text" x="600" y="695">Site Found?</text>
+  <text class="sub" x="600" y="724">Exception path if missing</text>
+  <rect class="step" x="390" y="860" width="420" height="92"/>
+  <text class="text" x="600" y="895">Calculate Risk Score</text>
+  <text class="sub" x="600" y="923">GIS risk + EJ + proximity indicators</text>
+  <rect class="step" x="390" y="1010" width="420" height="82"/>
+  <text class="text" x="600" y="1044">Generate AI Explanation</text>
+  <text class="sub" x="600" y="1072">Human-readable planning rationale</text>
+  <polygon class="decision" points="600,1160 810,1250 600,1340 390,1250"/>
+  <text class="text" x="600" y="1245">Risk Level?</text>
+  <rect class="auto" x="70" y="1195" width="250" height="96"/>
+  <text class="text" x="195" y="1235">Low Risk</text>
+  <text class="sub" x="195" y="1263">Auto recommendation</text>
+  <rect class="review" x="475" y="1390" width="250" height="86"/>
+  <text class="text" x="600" y="1427">Medium Risk</text>
+  <text class="sub" x="600" y="1455">Planner review</text>
+  <rect class="review" x="880" y="1195" width="250" height="96"/>
+  <text class="text" x="1005" y="1235">High Risk</text>
+  <text class="sub" x="1005" y="1263">EJ reviewer</text>
+  <path class="line" d="M600 262 V320"/>
+  <path class="line" d="M600 402 V460"/>
+  <path class="line" d="M600 542 V610"/>
+  <path class="line" d="M600 790 V860"/>
+  <path class="line" d="M600 952 V1010"/>
+  <path class="line" d="M600 1092 V1160"/>
+  <path class="line" d="M390 700 H190 V1195"/>
+  <text class="branch" x="206" y="684">No: request more data</text>
+  <path class="line" d="M600 1340 V1390"/>
+  <text class="branch" x="620" y="1372">Medium</text>
+  <path class="line" d="M390 1250 H320"/>
+  <text class="branch" x="333" y="1234">Low</text>
+  <path class="line" d="M810 1250 H880"/>
+  <text class="branch" x="823" y="1234">High</text>
+</svg>

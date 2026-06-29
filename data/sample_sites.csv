@@ -1,0 +1,6 @@
+site_name,address,lat,lon,project_type,flood_risk,rainfall_risk,noise_risk,poverty_rate,minority_share,near_school_m,near_transit_m,near_river_m,ej_flag
+3400 Market St,3400 Market St Philadelphia PA,39.9566,-75.1902,Mixed-use development,Medium,Medium,High,0.22,0.55,450,120,1800,Yes
+52nd St Station,52nd St Station Philadelphia PA,39.9581,-75.2234,Transit-adjacent redevelopment,Low,Medium,High,0.35,0.82,380,50,2200,Yes
+Manayunk,Manayunk Philadelphia PA,40.0265,-75.2230,Hillside residential development,Medium,High,Low,0.11,0.18,900,700,350,No
+City Hall,City Hall Philadelphia PA,39.9526,-75.1652,Commercial renovation,Low,Low,Medium,0.13,0.37,600,100,1200,No
+South Philly,South Philadelphia PA,39.9260,-75.1670,Warehouse conversion,Medium,Medium,Medium,0.24,0.61,520,300,900,Yes

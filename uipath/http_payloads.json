@@ -1,0 +1,43 @@
+{
+  "create_case_request": {
+    "method": "POST",
+    "url": "http://127.0.0.1:8000/cases",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "project_name": "52nd St Station Redevelopment",
+      "address": "52nd St Station",
+      "project_type": "Transit-adjacent redevelopment",
+      "reviewer": "Environmental Planning Team"
+    }
+  },
+  "create_case_response_key_fields": {
+    "case_id": "GEO-0001",
+    "status": "Awaiting Environmental Justice Review",
+    "workflow_path": "Environmental Justice Review",
+    "human_review_required": true,
+    "human_review_task": "Environmental Justice Review Task",
+    "screening_result": {
+      "overall_risk": "High",
+      "risk_score": 12,
+      "next_step": "Route to environmental justice reviewer"
+    }
+  },
+  "human_review_request": {
+    "method": "POST",
+    "url": "http://127.0.0.1:8000/cases/GEO-0001/review",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "decision": "Request additional environmental study",
+      "reviewer_name": "Environmental Planning Team",
+      "notes": "Additional environmental study requested before recommendation."
+    }
+  },
+  "report_request": {
+    "method": "GET",
+    "url": "http://127.0.0.1:8000/cases/GEO-0001/report"
+  }
+}
