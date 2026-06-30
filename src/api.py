@@ -14,7 +14,7 @@ from .case_workflow import (
     list_cases,
     submit_human_review,
 )
-from .report_generator import generate_report
+from .report_generator import generate_case_report, generate_report
 from .risk_screening import screen_site
 
 
@@ -119,9 +119,9 @@ def get_case_report(case_id: str) -> str:
     if case is None:
         raise HTTPException(status_code=404, detail="Case not found")
     report_path = case.get("report_path")
-    if not report_path or not Path(report_path).exists():
-        raise HTTPException(status_code=404, detail="Report not found")
-    return Path(report_path).read_text(encoding="utf-8")
+    if report_path and Path(report_path).exists():
+        return Path(report_path).read_text(encoding="utf-8")
+    return generate_case_report(case)
 
 
 DASHBOARD_HTML = """
