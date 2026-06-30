@@ -5,7 +5,7 @@ from __future__ import annotations
 from pathlib import Path
 
 from fastapi import FastAPI, HTTPException
-from fastapi.responses import HTMLResponse, PlainTextResponse
+from fastapi.responses import HTMLResponse, PlainTextResponse, RedirectResponse
 from pydantic import BaseModel
 
 from .case_workflow import (
@@ -42,13 +42,9 @@ class HumanReviewRequest(BaseModel):
     reviewer_name: str
 
 
-@app.get("/")
-def home() -> dict[str, str]:
-    return {
-        "message": "GeoCase AI API is running",
-        "dashboard": "/dashboard",
-        "docs": "/docs",
-    }
+@app.get("/", include_in_schema=False)
+def home() -> RedirectResponse:
+    return RedirectResponse(url="/dashboard")
 
 
 @app.get("/dashboard", response_class=HTMLResponse)

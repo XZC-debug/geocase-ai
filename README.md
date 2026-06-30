@@ -131,6 +131,26 @@ Run the command-line fallback demo:
 .venv/bin/python src/app.py "52nd St Station"
 ```
 
+## Deploy on Render
+
+This project includes `render.yaml` for a Render Web Service.
+
+Render settings:
+
+```text
+Build Command: pip install -r requirements.txt
+Start Command: uvicorn src.api:app --host 0.0.0.0 --port $PORT
+Plan: Free
+```
+
+After deployment, open:
+
+```text
+https://your-render-service.onrender.com/dashboard
+```
+
+The root URL also redirects to `/dashboard`.
+
 ## API Endpoints
 
 | Method | Endpoint | Purpose |
